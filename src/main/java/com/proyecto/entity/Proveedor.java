@@ -7,8 +7,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -29,13 +27,6 @@ public class Proveedor {
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
 	private Date fechaRegistro;
-	
-	@ManyToOne
-	@JoinColumn(name = "cod_producto")
-	private Producto producto;
-	
-	
-	
 	
 	
 	public Integer getCodigo() {
@@ -78,11 +69,4 @@ public class Proveedor {
 		this.fechaRegistro = fechaRegistro;
 	}
 
-	public Producto getProducto() {
-		return producto;
-	}
-
-	public void setProducto(Producto producto) {
-		this.producto = producto;
-	}
 }

@@ -27,6 +27,10 @@ public class Producto {
 	@JoinColumn(name = "cod_categoria")
 	private Categoria categoria;
 
+	@ManyToOne
+	@JoinColumn(name = "cod_proveedor")
+	private Proveedor proveedor;
+	
 	public Integer getCodigo() {
 		return codigo;
 	}
@@ -66,5 +70,15 @@ public class Producto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public Proveedor getProveedor() {
+		return proveedor;
+	}
+
+	public void setProveedor(Proveedor proveedor) {
+		this.proveedor = proveedor;
+	}
+	
+	
 
 }
