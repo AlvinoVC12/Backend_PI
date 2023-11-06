@@ -25,7 +25,7 @@ public class Proveedor {
 	private int contacto;
 	@Column(name="fec_registro")
 	@Temporal(TemporalType.TIMESTAMP)
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm")
 	private Date fechaRegistro;
 	
 	
